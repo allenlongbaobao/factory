@@ -5,10 +5,11 @@ var  express = require('express')
 
 module.exports = function (io) {
 	var app = express ();
-	app.post('/login', function (req,res,next){
+	app.get('/login', function (req,res,next){
 		var  url = req.body.url
 			,username = req.body.username
 			,password = req.body.password;
+		res.send("hello");
 	});
 
 	function dologin(username, password, callback){
@@ -18,4 +19,5 @@ module.exports = function (io) {
 			callback(null, user);
 		});
 	}
+	return app;
 }

@@ -4,24 +4,33 @@
  */
 
 var express = require('express')
+  , app = express()
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
   , config = require('./lib/config')
+  , server = http.createServer(app)
   , socketIo = require('socket.io')
-  , path = require('path');
+  , path = require('path')
+  , MongooseStore = require('connect-mongo')(express);
 
-var app = express();
+var sessionStorage = new MongooseStore({
+	db: config.session.dbname,
+	port: config.session.dbport
+});
+
 
 // all environments
 app.set('port', process.env.PORT || 3000);
-//app.set('views', __dirname + '/views');
-//app.set('view engine', 'jade');
 app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(app.router);
+app.use(express.cookieParser())
+app.use(express.session({
+	secret: config.session.secret,
+	store: sessionStorage
+}));
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 // development only
@@ -30,7 +39,6 @@ if ('development' == app.get('env')) {
 }
 
 app.get('/', function (req, res){ res.sendfile(__dirname + '/views/index.html')});
-app.get('/users', user.list);
 
 // access-control
 app.all('*', function (req, res, next) {
@@ -42,7 +50,7 @@ app.all('*', function (req, res, next) {
 	next();
 });
 
-io = socketIo.listen(app.listen(app.get('port')), {log: false});
+io = socketIo.listen(server);
 io = require('./lib/socketConfig')(io, sessionStorage);
 // API 
 app.use(require('./api/login')(io));
