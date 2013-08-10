@@ -5,7 +5,7 @@ var  express = require('express')
 
 module.exports = function (io) {
 	var app = express ();
-	app.get('/login', function (req,res,next){
+	app.post('/login', function (req,res,next){
 		var  url = req.body.url
 			,username = req.body.username
 			,password = req.body.password;
