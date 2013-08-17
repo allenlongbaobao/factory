@@ -7,7 +7,10 @@ describe('Array', function(){
 		});
 	});
 });
-
+User = function(name){
+	this.name = name;
+	this.save;	
+};
 describe('User', function(){
 	describe('#save()', function(){
 		it('should save without error', function(done){

@@ -1,15 +1,42 @@
 var  express = require('express')
 	,async = require('async')
-	,_ = require('underscore');
+	,db	= require('./../../lib/database')
+	,_ = require('underscore')
+	,assert = require('assert');
 
 
-exports = module.exports = function (){
-	
-}
-exports.dologin = function(){
-	this.age =  1;
-};
-exports.getinformation function(){
-		return 'yes';
+
+module.exports = function(io){
+	var app = express(); 
+	app.use(express.session());
+
+	app.post('/login', function(req,res,next){
+		var username = req.body.username
+		  , password = req.body.password;
+
+		doLogin(username,password, function (err, user){
+			if(err) res.send(err);
+			else
+			{
+				req.session.user_id = user._id;
+				req.session.user = user;
+				res.send(user);
+			}
+		});
+		res.send('login sucessfully!');
+	});
+
+	function doLogin(username,password,callback){
+		db.user.find(username,password,function(err,user){
+			console.log(user);
+			if(err) callback(err);
+			else
+			callback(user);
+		});
+
+
+	}
+
+	return app;
 };
 

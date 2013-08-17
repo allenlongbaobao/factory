@@ -1,47 +1,42 @@
-Tue Aug 13 09:50:49.412 
-Tue Aug 13 09:50:49.413 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
-Tue Aug 13 09:50:49.413 
-Tue Aug 13 09:50:49.553 [initandlisten] MongoDB starting : pid=3381 port=12345 dbpath=./data 32-bit host=localhost.localdomain
-Tue Aug 13 09:50:49.554 [initandlisten] 
-Tue Aug 13 09:50:49.554 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
-Tue Aug 13 09:50:49.554 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
-Tue Aug 13 09:50:49.554 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
-Tue Aug 13 09:50:49.554 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
-Tue Aug 13 09:50:49.554 [initandlisten] 
-Tue Aug 13 09:50:49.554 [initandlisten] db version v2.4.5
-Tue Aug 13 09:50:49.554 [initandlisten] git version: a2ddc68ba7c9cee17bfe69ed840383ec3506602b
-Tue Aug 13 09:50:49.554 [initandlisten] build info: Linux bs-linux32.10gen.cc 2.6.21.7-2.fc8xen #1 SMP Fri Feb 15 12:39:36 EST 2008 i686 BOOST_LIB_VERSION=1_49
-Tue Aug 13 09:50:49.554 [initandlisten] allocator: system
-Tue Aug 13 09:50:49.554 [initandlisten] options: { dbpath: "./data", port: 12345 }
-Tue Aug 13 09:50:50.013 [initandlisten] waiting for connections on port 12345
-Tue Aug 13 09:50:50.013 [websvr] admin web console waiting for connections on port 13345
-Tue Aug 13 10:04:48.099 [initandlisten] connection accepted from 127.0.0.1:33244 #1 (1 connection now open)
-Tue Aug 13 10:04:48.103 [initandlisten] connection accepted from 127.0.0.1:33245 #2 (2 connections now open)
-Tue Aug 13 10:04:48.104 [initandlisten] connection accepted from 127.0.0.1:33246 #3 (3 connections now open)
-Tue Aug 13 10:04:48.106 [initandlisten] connection accepted from 127.0.0.1:33247 #4 (4 connections now open)
-Tue Aug 13 10:04:48.107 [initandlisten] connection accepted from 127.0.0.1:33248 #5 (5 connections now open)
-Tue Aug 13 10:04:55.363 [conn5] end connection 127.0.0.1:33248 (4 connections now open)
-Tue Aug 13 10:04:55.363 [conn3] end connection 127.0.0.1:33246 (4 connections now open)
-Tue Aug 13 10:04:55.363 [conn1] end connection 127.0.0.1:33244 (4 connections now open)
-Tue Aug 13 10:04:55.363 [conn4] end connection 127.0.0.1:33247 (2 connections now open)
-Tue Aug 13 10:04:55.364 [conn2] end connection 127.0.0.1:33245 (0 connections now open)
-Tue Aug 13 10:05:10.250 [initandlisten] connection accepted from 127.0.0.1:33249 #6 (1 connection now open)
-Tue Aug 13 10:05:10.254 [initandlisten] connection accepted from 127.0.0.1:33250 #7 (2 connections now open)
-Tue Aug 13 10:05:10.255 [initandlisten] connection accepted from 127.0.0.1:33251 #8 (3 connections now open)
-Tue Aug 13 10:05:10.256 [initandlisten] connection accepted from 127.0.0.1:33252 #9 (4 connections now open)
-Tue Aug 13 10:05:10.257 [initandlisten] connection accepted from 127.0.0.1:33253 #10 (5 connections now open)
-Tue Aug 13 10:05:12.546 [conn6] end connection 127.0.0.1:33249 (4 connections now open)
-Tue Aug 13 10:05:12.546 [conn10] end connection 127.0.0.1:33253 (4 connections now open)
-Tue Aug 13 10:05:12.546 [conn9] end connection 127.0.0.1:33252 (2 connections now open)
-Tue Aug 13 10:05:12.546 [conn8] end connection 127.0.0.1:33251 (2 connections now open)
-Tue Aug 13 10:05:12.546 [conn7] end connection 127.0.0.1:33250 (2 connections now open)
-Tue Aug 13 10:28:24.132 [initandlisten] connection accepted from 127.0.0.1:33403 #11 (1 connection now open)
-Tue Aug 13 10:28:24.136 [initandlisten] connection accepted from 127.0.0.1:33404 #12 (2 connections now open)
-Tue Aug 13 10:28:24.137 [initandlisten] connection accepted from 127.0.0.1:33405 #13 (3 connections now open)
-Tue Aug 13 10:28:24.139 [initandlisten] connection accepted from 127.0.0.1:33406 #14 (4 connections now open)
-Tue Aug 13 10:28:24.140 [initandlisten] connection accepted from 127.0.0.1:33407 #15 (5 connections now open)
-Tue Aug 13 10:28:49.159 [conn11] end connection 127.0.0.1:33403 (4 connections now open)
-Tue Aug 13 10:28:49.159 [conn12] end connection 127.0.0.1:33404 (3 connections now open)
-Tue Aug 13 10:28:49.160 [conn13] end connection 127.0.0.1:33405 (2 connections now open)
-Tue Aug 13 10:28:49.160 [conn14] end connection 127.0.0.1:33406 (1 connection now open)
-Tue Aug 13 10:28:49.160 [conn15] end connection 127.0.0.1:33407 (0 connections now open)
+Sat Aug 17 13:45:07.829 
+Sat Aug 17 13:45:07.829 warning: 32-bit servers don't have journaling enabled by default. Please use --journal if you want durability.
+Sat Aug 17 13:45:07.829 
+Sat Aug 17 13:45:07.884 [initandlisten] MongoDB starting : pid=11216 port=12345 dbpath=./data 32-bit host=localhost.localdomain
+Sat Aug 17 13:45:07.887 [initandlisten] 
+Sat Aug 17 13:45:07.888 [initandlisten] ** NOTE: This is a 32 bit MongoDB binary.
+Sat Aug 17 13:45:07.888 [initandlisten] **       32 bit builds are limited to less than 2GB of data (or less with --journal).
+Sat Aug 17 13:45:07.888 [initandlisten] **       Note that journaling defaults to off for 32 bit and is currently off.
+Sat Aug 17 13:45:07.888 [initandlisten] **       See http://dochub.mongodb.org/core/32bit
+Sat Aug 17 13:45:07.888 [initandlisten] 
+Sat Aug 17 13:45:07.888 [initandlisten] db version v2.4.5
+Sat Aug 17 13:45:07.888 [initandlisten] git version: a2ddc68ba7c9cee17bfe69ed840383ec3506602b
+Sat Aug 17 13:45:07.888 [initandlisten] build info: Linux bs-linux32.10gen.cc 2.6.21.7-2.fc8xen #1 SMP Fri Feb 15 12:39:36 EST 2008 i686 BOOST_LIB_VERSION=1_49
+Sat Aug 17 13:45:07.888 [initandlisten] allocator: system
+Sat Aug 17 13:45:07.888 [initandlisten] options: { dbpath: "./data", port: 12345 }
+Sat Aug 17 13:45:07.997 [initandlisten] waiting for connections on port 12345
+Sat Aug 17 13:45:07.997 [websvr] admin web console waiting for connections on port 13345
+Sat Aug 17 13:45:09.171 [initandlisten] connection accepted from 127.0.0.1:49731 #1 (1 connection now open)
+Sat Aug 17 13:45:09.174 [initandlisten] connection accepted from 127.0.0.1:49732 #2 (2 connections now open)
+Sat Aug 17 13:45:09.178 [initandlisten] connection accepted from 127.0.0.1:49733 #3 (3 connections now open)
+Sat Aug 17 13:45:09.184 [initandlisten] connection accepted from 127.0.0.1:49734 #4 (4 connections now open)
+Sat Aug 17 13:45:09.185 [initandlisten] connection accepted from 127.0.0.1:49735 #5 (5 connections now open)
+Sat Aug 17 13:45:09.186 [initandlisten] connection accepted from 127.0.0.1:49736 #6 (6 connections now open)
+Sat Aug 17 13:45:09.188 [initandlisten] connection accepted from 127.0.0.1:49737 #7 (7 connections now open)
+Sat Aug 17 13:45:09.189 [initandlisten] connection accepted from 127.0.0.1:49738 #8 (8 connections now open)
+Sat Aug 17 13:45:09.238 [initandlisten] connection accepted from 127.0.0.1:49739 #9 (9 connections now open)
+Sat Aug 17 13:45:09.239 [initandlisten] connection accepted from 127.0.0.1:49740 #10 (10 connections now open)
+Sat Aug 17 13:46:36.032 [signalProcessingThread] got signal 2 (Interrupt), will terminate after current cmd ends
+Sat Aug 17 13:46:36.032 [signalProcessingThread] now exiting
+Sat Aug 17 13:46:36.032 dbexit: 
+Sat Aug 17 13:46:36.032 [signalProcessingThread] shutdown: going to close listening sockets...
+Sat Aug 17 13:46:36.032 [signalProcessingThread] closing listening socket: 7
+Sat Aug 17 13:46:36.032 [signalProcessingThread] closing listening socket: 8
+Sat Aug 17 13:46:36.032 [signalProcessingThread] closing listening socket: 9
+Sat Aug 17 13:46:36.032 [signalProcessingThread] removing socket file: /tmp/mongodb-12345.sock
+Sat Aug 17 13:46:36.032 [signalProcessingThread] shutdown: going to flush diaglog...
+Sat Aug 17 13:46:36.032 [signalProcessingThread] shutdown: going to close sockets...
+Sat Aug 17 13:46:36.032 [signalProcessingThread] shutdown: waiting for fs preallocator...
+Sat Aug 17 13:46:36.032 [signalProcessingThread] shutdown: closing all files...
+Sat Aug 17 13:46:36.033 [signalProcessingThread] closeAllFiles() finished
+Sat Aug 17 13:46:36.033 [signalProcessingThread] shutdown: removing fs lock...
+Sat Aug 17 13:46:36.033 dbexit: really exiting now

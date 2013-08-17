@@ -11,7 +11,9 @@ var express = require('express')
   , server = http.createServer(app)
   , socketIo = require('socket.io')
   , path = require('path')
+  , connect = require('connect')
   , MongooseStore = require('connect-mongo')(express);
+
 
 var sessionStorage = new MongooseStore({
 	db: config.session.dbname,
@@ -25,7 +27,7 @@ app.use(express.favicon());
 app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
-app.use(express.cookieParser())
+app.use(express.cookieParser());
 app.use(express.session({
 	secret: config.session.secret,
 	store: sessionStorage
@@ -54,6 +56,8 @@ io = socketIo.listen(server);
 io = require('./lib/socketConfig')(io, sessionStorage);
 // API 
 app.use(require('./api/login')(io));
+app.use(require('./api/signup')(io));
+app.use(require('./api/logout'));
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));

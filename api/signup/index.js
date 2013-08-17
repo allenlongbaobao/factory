@@ -7,11 +7,32 @@ var  express = require('express')
 
 module.exports = function(io){
 	var app = express();
-	var formatConverter = require('../../lib/formatConverter')(io);
 
 	app.post('/signup', function(req, res, next){
 		var userInfo = req.body;
 
+		createNewAccount(userInfo, function(err,result){
+				if(err) res.send(err);
+				res.send(result);
 
+		});
+		
+		res.send('signup successfully!');
+		
 	});
+
+	function createNewAccount(userInfo, callback){
+		db.user.isExists(userInfo.username,userInfo.email, function(err, user){
+			if(err) callback(err);
+			var newAccount = db.user(userInfo);
+			newAccount.save(function(err){
+				if (err) callback(err);
+				else
+				callback(null, 'ok');
+			});
+
+		});
+	}
+
+	return app;
 }
